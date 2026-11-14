@@ -17,6 +17,7 @@
   h2 { font-size:19px; margin:28px 0 8px; }
   .meta { color:var(--muted); font-size:14px; margin-bottom:8px; }
   .highlight { background:color-mix(in srgb, var(--brand) 10%, transparent); border-left:4px solid var(--brand); padding:12px 14px; border-radius:8px; font-weight:600; }
+  code { font-size:.92em; word-break:break-all; }
   a { color:var(--brand); }
   hr { border:none; border-top:1px solid var(--line); margin:40px 0; }
   ul { padding-left:22px; }
@@ -26,46 +27,68 @@
 <main>
 <div class="card">
   <h1><span>SORTVERSE</span> — Privacy Policy</h1>
-  <p class="meta">Effective date: 2 November 2026 · Developer: ir-As Games · Contact: <a href="mailto:irasyazilim@gmail.com">irasyazilim@gmail.com</a></p>
-  <p>This policy explains what information the SORTVERSE mobile game ("the Game") collects and how it is used. It applies to the current version of the Game distributed through Google Play.</p>
+  <p class="meta">Effective date: 14 November 2026 · Developer: ir-As Games · Contact: <a href="mailto:irasyazilim@gmail.com">irasyazilim@gmail.com</a></p>
+  <p>This policy explains what information the SORTVERSE mobile game ("the Game") collects and how it is used. It applies to version 1.0 of the Game for Android, distributed through Google Play.</p>
+
+  <h2>Changes in this version</h2>
+  <ul>
+    <li>The old text said purchases may come "in future versions". Version 1.0 has real in-app purchases and a subscription through Google Play. Section 2 now describes them.</li>
+    <li>New section 3: the game makes one small internet request to read the current time (used for limited-time offers and the Season Pass). It carries no data from your device.</li>
+    <li>New section 4: what the game stores on your device (progress, settings, a purchase record).</li>
+    <li>Age statement changed to "13 and older" and the Turkish summary was updated to match.</li>
+    <li>Everything else (no account, no ads, no analytics, nothing sent to us) is unchanged.</li>
+  </ul>
 
   <h2>1. Information we collect</h2>
-  <p class="highlight">The current version of the Game does not collect, store, or share any personal information.</p>
+  <p class="highlight">We, the developer, do not collect, receive, store or share any personal information through the Game.</p>
   <ul>
     <li>The Game does not require an account or sign-in.</li>
     <li>The Game does not contain advertising and does not use the Android Advertising ID.</li>
-    <li>The Game does not include analytics, tracking, or crash-reporting services.</li>
-    <li>Game progress and settings are stored <strong>only on your device</strong>. They are not transmitted to us.</li>
+    <li>The Game does not include analytics, tracking or crash-reporting services. Game events that the Game keeps for its own use (for example "level completed") stay in the device's memory while the Game runs. They are not saved to a file and not sent anywhere.</li>
+    <li>We have no server that receives data from the Game.</li>
   </ul>
 
-  <h2>2. Purchases</h2>
-  <p>Future versions of the Game may offer optional in-app purchases. These are processed by Google Play under Google's own terms and privacy policy. We do not receive or store your payment card details. When purchases are introduced, we will receive only the information needed to deliver and verify the item you bought (for example, a purchase confirmation token). This policy will be updated before that happens.</p>
+  <h2>2. Purchases and subscriptions</h2>
+  <p>The Game offers optional purchases: coin and gem packs, a Starter Pack, a Season Pass, limited-time offers and a monthly "VIP" subscription.</p>
+  <ul>
+    <li><strong>Google Play handles the payment.</strong> Purchases and subscriptions run through Google Play Billing under Google's terms and privacy policy (<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>). We never see or receive your payment card or account details. Google tells us nothing about you beyond the confirmation the Game needs on your device.</li>
+    <li><strong>What the Game keeps on your device.</strong> When Google Play confirms a purchase, the Game checks Google's digital signature on the confirmation, delivers the item once, and saves a small record in its local save file: the order identifier (or purchase token), the product name (for example <code>gems_s</code>) and whether the item was delivered. This record stops the same purchase from being delivered twice and lets the Game restore what you bought. It stays on your device and is not sent to us.</li>
+    <li><strong>Restoring purchases.</strong> Items you bought that are not consumed (such as the Season Pass) and your VIP subscription are read again from Google Play when the Game starts and when you tap "Restore purchases". The answer comes from Google Play to your device.</li>
+    <li><strong>Subscription.</strong> VIP renews automatically every month until you cancel it. You can cancel any time in Google Play (Menu, Payments and subscriptions, Subscriptions) or from the "Manage" button in the Game, which opens the Google Play subscription page. Refunds are handled by Google Play under its policies; if a purchase is refunded or a subscription ends, the Game removes the item or benefit the next time it reads your purchases.</li>
+    <li><strong>Prices</strong> shown in the Game are the prices Google Play reports for your country and currency.</li>
+  </ul>
 
-  <h2>3. Third parties</h2>
-  <p>The Game is built with the Unity engine and distributed through Google Play. In its current version, the Game does not send personal information to us or to any third-party service. Google Play may collect information under its own policies when you download or update apps: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</p>
+  <h2>3. The time request</h2>
+  <p>Limited-time offers and the Season Pass need a trustworthy date. When the Game starts, when you return to it, and about every six hours while it is open, it sends one HTTPS request to <code>https://www.google.com/generate_204</code> and reads the date and time from the reply. Nothing is added to this request: no identifier, no cookie from the Game, no information about you, your device or your progress. As with any web request, Google receives your device's IP address and standard technical request information (such as the user-agent text of the Unity engine) and handles it under Google's privacy policy. We receive nothing. If the request fails (for example you are offline), the Game simply keeps playing and hides the time-limited features until a later request succeeds.</p>
 
-  <h2>4. Children</h2>
-  <p>The Game is not directed to children under 13, and we do not knowingly collect personal information from anyone, including children. If you believe a child has provided us with personal information, contact us and we will delete it.</p>
+  <h2>4. What stays on your device</h2>
+  <p>Your progress, settings (language, sound, vibration and similar), collected rewards, decorations and the purchase record from section 2 are saved in a file in the Game's private storage on your device. We do not receive this file. If you use Android's device backup, Android or your device maker may copy app data to your own Google account under the device's backup settings; that is controlled by your device, not by us.</p>
 
-  <h2>5. Future online features</h2>
-  <p>We plan to add online features such as cloud save, friends, clubs, leaderboards, and multiplayer. <strong>Before any such feature is released, we will update this policy</strong> to describe exactly what data is collected, why, how long it is kept, and how you can request its deletion. We will also update the Google Play Data safety section at the same time.</p>
+  <h2>5. Third parties</h2>
+  <p>The Game is built with the Unity engine and uses Unity's in-app purchasing package (for Google Play Billing). We do not use Unity's online services, advertising, analytics or crash-reporting features, and we do not send any data to Unity. The Game's only network contacts are Google Play (purchases, section 2) and the Google time request (section 3), plus a link that opens the Google Play subscription page in your browser or the Play Store when you tap "Manage". Google Play may also collect information under its own policies when you download or update apps.</p>
 
-  <h2>6. Your rights</h2>
-  <p>Because the current version collects no personal data, there is no personal data for us to access, correct, or delete. You can remove all locally stored game data at any time by uninstalling the Game or clearing its app data in your device settings. For any privacy question, contact <a href="mailto:irasyazilim@gmail.com">irasyazilim@gmail.com</a>.</p>
+  <h2>6. Children</h2>
+  <p>The Game is intended for players aged 13 and older. It is not directed to children under 13, and we do not knowingly collect personal information from anyone, including children. If you believe a child has provided us with personal information, contact us and we will delete it.</p>
 
-  <h2>7. Changes to this policy</h2>
+  <h2>7. Your rights and deleting your data</h2>
+  <p>Because we do not collect personal data, there is no personal data held by us for you to access, correct or delete. To remove everything the Game stored on your device, uninstall the Game or clear its data in your device settings (Settings, Apps, SORTVERSE, Storage, Clear data). Purchases are tied to your Google account and are managed with Google; after reinstalling you can restore them with "Restore purchases". For any privacy question, including questions under the GDPR or the Turkish KVKK, contact <a href="mailto:irasyazilim@gmail.com">irasyazilim@gmail.com</a>.</p>
+
+  <h2>8. Future online features</h2>
+  <p>We plan to add online features after launch, such as cloud save, friends, clubs, leaderboards and multiplayer. <strong>Before any such feature is released, we will update this policy</strong> to describe exactly what data is collected, why, how long it is kept and how you can request its deletion. We will also update the Google Play Data safety section at the same time.</p>
+
+  <h2>9. Changes to this policy</h2>
   <p>We will post any changes on this page and update the effective date above.</p>
 
   <hr>
 
   <h1 lang="tr"><span>SORTVERSE</span> — Gizlilik Politikası</h1>
-  <p class="meta" lang="tr">Yürürlük tarihi: 2 Kasım 2026 · Geliştirici: ir-As Games · İletişim: <a href="mailto:irasyazilim@gmail.com">irasyazilim@gmail.com</a></p>
+  <p class="meta" lang="tr">Yürürlük tarihi: 14 Kasım 2026 · Geliştirici: ir-As Games · İletişim: <a href="mailto:irasyazilim@gmail.com">irasyazilim@gmail.com</a></p>
   <ul lang="tr">
-    <li>Oyunun mevcut sürümü <strong>hiçbir kişisel veri toplamaz, saklamaz veya paylaşmaz.</strong></li>
-    <li>Hesap veya giriş gerektirmez. Reklam içermez ve Reklam Kimliği'ni kullanmaz. Analitik veya takip hizmeti yoktur.</li>
-    <li>Oyun ilerlemesi ve ayarlar <strong>yalnızca cihazınızda</strong> saklanır.</li>
-    <li>İleride eklenecek uygulama içi satın almalar Google Play tarafından işlenir. Ödeme bilgileriniz bize ulaşmaz.</li>
-    <li>Oyun 13 yaş altındaki çocuklara yönelik değildir.</li>
+    <li>Geliştirici olarak oyun aracılığıyla <strong>hiçbir kişisel veri toplamayız, saklamayız veya paylaşmayız.</strong> Hesap veya giriş gerekmez. Reklam yoktur, Reklam Kimliği kullanılmaz. Analitik, takip veya çökme raporlama hizmeti yoktur. Bize veri gönderen bir sunucumuz yoktur.</li>
+    <li><strong>Satın almalar ve abonelik</strong> (altın/elmas paketleri, Başlangıç Paketi, Sezon Bileti, süreli teklifler, aylık VIP) Google Play üzerinden işlenir. Kart veya hesap bilgileriniz bize ulaşmaz. Oyun, Google'ın onayının imzasını cihazınızda denetler ve cihazınızda küçük bir kayıt tutar (sipariş numarası, ürün adı, teslim edildi mi). Bu kayıt cihazınızdan çıkmaz. VIP, siz Google Play'de iptal edene kadar her ay otomatik yenilenir; "Yönet" düğmesi Google Play abonelik sayfasını açar.</li>
+    <li><strong>Saat isteği:</strong> Süreli teklifler ve Sezon Bileti için oyun, güvenilir bir tarih almak üzere <code>https://www.google.com/generate_204</code> adresine tek bir HTTPS isteği gönderir (açılışta, uygulamaya dönüşte ve açıkken yaklaşık altı saatte bir). İsteğe hiçbir tanımlayıcı veya kişisel bilgi eklenmez. Her web isteğinde olduğu gibi Google, IP adresinizi ve standart teknik istek bilgisini alır. Biz hiçbir şey almayız. İstek başarısız olursa oyun çalışmaya devam eder, süreli özellikler gizlenir.</li>
+    <li>İlerlemeniz, ayarlarınız ve satın alma kaydınız <strong>yalnızca cihazınızda</strong> saklanır. Oyunu kaldırarak veya uygulama verisini temizleyerek hepsini silebilirsiniz. Satın alımlarınız Google hesabınıza bağlıdır; yeniden kurulumdan sonra "Satın alımları geri yükle" ile geri getirilir.</li>
+    <li>Oyun <strong>13 yaş ve üzeri</strong> oyuncular içindir; 13 yaş altındaki çocuklara yönelik değildir.</li>
     <li>Bulut kayıt, arkadaşlar, kulüpler, sıralamalar ve çok oyunculu mod gibi çevrimiçi özellikler eklenmeden <strong>önce</strong> bu politika ve Google Play Veri güvenliği bölümü güncellenecektir.</li>
     <li>6698 sayılı KVKK ve GDPR kapsamındaki sorularınız için: <a href="mailto:irasyazilim@gmail.com">irasyazilim@gmail.com</a></li>
   </ul>
